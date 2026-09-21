@@ -39,6 +39,85 @@
   </header>
 
   <main>
+
+ <section class="section section--form" id="cadastro">
+      <div class="container form-grid">
+        <div class="form-copy">
+          <span class="panel__label panel__label--light">Próximo passo</span>
+          <h2>Cadastre seu interesse</h2>
+          <p>Preencha seus dados para que a equipe Dygimed apresente as condições destinadas aos associados CRC-MA.</p>
+          <div class="form-benefits"><span>✓ Cadastro rápido</span><span>✓ Sem compromisso</span><span>✓ Atendimento personalizado</span></div>
+        </div>
+
+        <form class="lead-form" id="lead-form" action="https://formspree.io/f/mzdyvglq" method="POST" novalidate>
+          <input type="hidden" name="origem" value="Landing Page Dygimed - CRC-MA">
+          <input type="hidden" name="_subject" value="Novo interesse Dygimed - CRC-MA">
+
+          <label class="form-field" for="nome">
+            <span class="field-label">Nome completo <b aria-hidden="true">*</b></span>
+            <input id="nome" type="text" name="nome" autocomplete="name" required minlength="3" placeholder="Digite seu nome" aria-describedby="nome-erro">
+            <span class="field-error" id="nome-erro" aria-live="polite"></span>
+          </label>
+
+          <div class="field-row">
+            <label class="form-field" for="whatsapp">
+              <span class="field-label">WhatsApp <b aria-hidden="true">*</b></span>
+              <input id="whatsapp" type="tel" name="whatsapp" autocomplete="tel" inputmode="numeric" required maxlength="19" value="+55 " placeholder="+55 (61) 99999-9999" aria-describedby="whatsapp-ajuda whatsapp-erro">
+              <span class="field-hint" id="whatsapp-ajuda">Informe o DDD e os 9 dígitos do celular.</span>
+              <span class="field-error" id="whatsapp-erro" aria-live="polite"></span>
+            </label>
+
+            <label class="form-field" for="email">
+              <span class="field-label">E-mail <b aria-hidden="true">*</b></span>
+              <input id="email" type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required placeholder="voce@empresa.com.br" aria-describedby="email-erro">
+              <span class="field-error" id="email-erro" aria-live="polite"></span>
+            </label>
+          </div>
+
+          <div class="field-row">
+            
+<label class="form-field" for="registro_crc">
+              <span class="field-label">Registro profissional no CRC <b aria-hidden="true">*</b></span>
+              <input id="registro_crc" type="text" name="registro_crc" required maxlength="24" autocapitalize="characters" placeholder="Ex.: MA-012345/O-0" aria-describedby="registro_crc-ajuda registro_crc-erro">
+              <span class="field-hint" id="registro_crc-ajuda">Usaremos o registro para validar o benefício.</span>
+              <span class="field-error" id="registro_crc-erro" aria-live="polite"></span>
+            </label>
+
+	<label class="form-field" for="empresa">
+              <span class="field-label">Quantas Empresas seu escritório atende?</span>
+             <!-- <input id="empresa" type="text" name="empresa" autocomplete="organization" placeholder="Nome da empresa"> -->
+            
+<select id="empresa" name="empresa" required aria-describedby="empresa-erro">
+                <option value="">Selecione</option>
+                <option value="1">Até 5</option>
+                <option value="2">De 6 a 20</option>
+		<option value="3">De 21 a 50</option>
+		<option value="4">De 51 a 80</option>
+		<option value="5">Acima de 80</option>
+              </select>
+	</label>
+
+            
+          </div>
+
+         
+          <label class="consent form-field" for="consentimento">
+            <input id="consentimento" type="checkbox" name="consentimento" value="Autorizado" required aria-describedby="consentimento-erro">
+            <span>Autorizo o contato da equipe Dygimed sobre esta solicitação.</span>
+            <span class="field-error consent__error" id="consentimento-erro" aria-live="polite"></span>
+          </label>
+
+          <button class="btn btn--submit" type="submit" data-default-text="Quero conhecer o benefício">
+            <span class="submit-label">Quero conhecer o benefício</span>
+            <span class="submit-spinner" aria-hidden="true"></span>
+          </button>
+
+          <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+          <p class="privacy">Seus dados serão utilizados exclusivamente para atender esta solicitação.</p>
+        </form>
+      </div>
+    </section>
+
     <section class="hero" id="inicio">
       <div class="container hero__grid">
         <div class="hero__content">
@@ -128,91 +207,7 @@
       </div>
     </section>
 
-    <section class="section section--form" id="cadastro">
-      <div class="container form-grid">
-        <div class="form-copy">
-          <span class="panel__label panel__label--light">Próximo passo</span>
-          <h2>Cadastre seu interesse</h2>
-          <p>Preencha seus dados para que a equipe Dygimed apresente as condições destinadas aos associados CRC-MA.</p>
-          <div class="form-benefits"><span>✓ Cadastro rápido</span><span>✓ Sem compromisso</span><span>✓ Atendimento personalizado</span></div>
-        </div>
-
-        <form class="lead-form" id="lead-form" action="https://formspree.io/f/mzdyvglq" method="POST" novalidate>
-          <input type="hidden" name="origem" value="Landing Page Dygimed - CRC-MA">
-          <input type="hidden" name="_subject" value="Novo interesse Dygimed - CRC-MA">
-
-          <label class="form-field" for="nome">
-            <span class="field-label">Nome completo <b aria-hidden="true">*</b></span>
-            <input id="nome" type="text" name="nome" autocomplete="name" required minlength="3" placeholder="Digite seu nome" aria-describedby="nome-erro">
-            <span class="field-error" id="nome-erro" aria-live="polite"></span>
-          </label>
-
-          <div class="field-row">
-            <label class="form-field" for="whatsapp">
-              <span class="field-label">WhatsApp <b aria-hidden="true">*</b></span>
-              <input id="whatsapp" type="tel" name="whatsapp" autocomplete="tel" inputmode="numeric" required maxlength="19" value="+55 " placeholder="+55 (61) 99999-9999" aria-describedby="whatsapp-ajuda whatsapp-erro">
-              <span class="field-hint" id="whatsapp-ajuda">Informe o DDD e os 9 dígitos do celular.</span>
-              <span class="field-error" id="whatsapp-erro" aria-live="polite"></span>
-            </label>
-
-            <label class="form-field" for="email">
-              <span class="field-label">E-mail <b aria-hidden="true">*</b></span>
-              <input id="email" type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required placeholder="voce@empresa.com.br" aria-describedby="email-erro">
-              <span class="field-error" id="email-erro" aria-live="polite"></span>
-            </label>
-          </div>
-
-          <div class="field-row">
-            <label class="form-field" for="empresa">
-              <span class="field-label">Empresa ou escritório</span>
-              <input id="empresa" type="text" name="empresa" autocomplete="organization" placeholder="Nome da empresa">
-            </label>
-
-            <label class="form-field" for="registro_crc">
-              <span class="field-label">Registro profissional no CRC <b aria-hidden="true">*</b></span>
-              <input id="registro_crc" type="text" name="registro_crc" required maxlength="24" autocapitalize="characters" placeholder="Ex.: MA-012345/O-0" aria-describedby="registro_crc-ajuda registro_crc-erro">
-              <span class="field-hint" id="registro_crc-ajuda">Usaremos o registro para validar o benefício.</span>
-              <span class="field-error" id="registro_crc-erro" aria-live="polite"></span>
-            </label>
-          </div>
-
-          <div class="field-row">
-            <label class="form-field" for="associado_crcdf">
-              <span class="field-label">É associado ao CRC-MA? <b aria-hidden="true">*</b></span>
-              <select id="associado_crcdf" name="associado_crcdf" required aria-describedby="associado_crcdf-erro">
-                <option value="">Selecione</option>
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-              </select>
-              <span class="field-error" id="associado_crcdf-erro" aria-live="polite"></span>
-            </label>
-
-            <label class="form-field" for="plano_interesse">
-              <span class="field-label">Plano de interesse</span>
-              <select id="plano_interesse" name="plano_interesse">
-                <option value="Selecione">Selecione</option>
-                <option value="PAI">PAI</option>
-                <option value="PAI+ESP">PAI + ESP</option>
-              </select>
-            </label>
-          </div>
-
-          <label class="consent form-field" for="consentimento">
-            <input id="consentimento" type="checkbox" name="consentimento" value="Autorizado" required aria-describedby="consentimento-erro">
-            <span>Autorizo o contato da equipe Dygimed sobre esta solicitação.</span>
-            <span class="field-error consent__error" id="consentimento-erro" aria-live="polite"></span>
-          </label>
-
-          <button class="btn btn--submit" type="submit" data-default-text="Quero conhecer o benefício">
-            <span class="submit-label">Quero conhecer o benefício</span>
-            <span class="submit-spinner" aria-hidden="true"></span>
-          </button>
-
-          <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
-          <p class="privacy">Seus dados serão utilizados exclusivamente para atender esta solicitação.</p>
-        </form>
-      </div>
-    </section>
+   
 
     <footer class="footer"><strong>Dygimed</strong><span>Saúde corporativa sem fronteiras.</span><a href="https://dygimedassociados.com.br">dygimedassociados.com.br</a></footer>
 
